@@ -55,7 +55,7 @@ The main disadvantages from the first option to the second are:
 The second option has the inconvenience that once a Version is created, although it can be stopped and the name can be changed, it cannot be deleted.
 
 ## Training Output Files and Re-training
-During training, we validate learning using metrics like F1-score and mIoU. In epochs where we get the best metric score, we save a copy of the model at that epoch. In the end we end up with four model files, with the extension ".pth.tar". A JSON file is also created (scores.json), containing metric values for every epoch as well as top metric scores.
+During training, we validate learning using metrics like F1-score and mIoU. In epochs where we get the best metric score, we save a copy of the model at that epoch. In the end we end up with four model files, with the extension ".pth.tar" (e.g. "best_miou.pth.tar"). A JSON file is also created (scores.json), containing metric values for every epoch as well as top metric scores.
 Once training is over, files can be downloaded. 
 - In the "Run All" option, they are available in Output, on the right side of the screen.
 - In the "Save Version" option, you must go to Kaggle's homepage, select "Code", access your notebook and click on "Version n of n" ("n" being a number). You will get a list of all versions of that notebook, in cronological order.

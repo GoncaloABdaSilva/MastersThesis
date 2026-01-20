@@ -12,7 +12,7 @@ For the actual model, four python files and one json file are needed:
 - main.py;
 - dataset.py;
 - utils.py;
-- model.py,
+- model.py;
 - [scores.json](https://github.com/GoncaloABdaSilva/MastersThesis/blob/adedb57853bb7b9889e3b4417b62f5ceaa579b59/Source%20Code/scores.json).
 
 On Kaggle, go to "Datasets", press "+ New Dataset", drag and drop the files and name your dataset accordingly. 

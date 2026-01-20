@@ -15,10 +15,10 @@ For the actual model, four python files and one json file are needed:
 - model.py,
 - [scores.json](https://github.com/GoncaloABdaSilva/MastersThesis/blob/adedb57853bb7b9889e3b4417b62f5ceaa579b59/Source%20Code/scores.json).
 
-On Kaggle, go to Datasets, press "+ New Dataset", drag and drop the files and name your dataset accordingly. 
+On Kaggle, go to "Datasets", press "+ New Dataset", drag and drop the files and name your dataset accordingly. 
 All python files are edited locally (not in Kaggle), so they should first be downloaded into a local directory (along with testing file "test_models"). In case of code modifications, updated files can be re-uploaded by using the "three dots button" on the top right corner, choosing "New Version", and drag and drop the updated files.
 
-In SAM2, instead of model.py, it is sam2_seg_wrapper.py, and the notebook code is different (check [sam2-fine-tuning.ipynb](https://github.com/GoncaloABdaSilva/MastersThesis/blob/463055eee4503034dbc181c05a1622ea4adae3c1/Source%20Code/SAM2/sam2-fine-tuning.ipynb)). 
+In SAM2, instead of "model.py", it's "sam2_seg_wrapper.py", and the notebook code is different (check [sam2-fine-tuning.ipynb](https://github.com/GoncaloABdaSilva/MastersThesis/blob/463055eee4503034dbc181c05a1622ea4adae3c1/Source%20Code/SAM2/sam2-fine-tuning.ipynb)). 
 
 In YOLO, there is only one file, [yolo12-seg-fine-tune.ipynb](https://github.com/GoncaloABdaSilva/MastersThesis/blob/463055eee4503034dbc181c05a1622ea4adae3c1/Source%20Code/YOLOv11-seg/yolo12-seg-fine-tune.ipynb), that should be copied instead. 
 

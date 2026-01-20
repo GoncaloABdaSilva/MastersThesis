@@ -50,8 +50,8 @@ To train the model there are two options:
 - The second option is by pressing the "Save Version" button on the top right corner. After giving a name (e.g. "Attempt 1), select "Save & Run All" and on advanced settings select "Run with GPU for all sessions".
 
 The main disadvantages from the first option to the second are:
-- the notebook requires to be actively used during training while the second doesn't. If the session is stopped all output files will be lost rather than being permanently accessible after the session is complete;
-- if code is updated, it requires to manually scan for updates by hovering the dataset name, "More Options", "Check for updates".
+- The notebook requires to be actively used during training while the second doesn't. If the session is stopped all output files will be lost rather than being permanently accessible after the session is complete;
+- If code is updated, it requires to manually scan for updates by hovering the dataset name, "More Options", "Check for updates".
 The second option has the inconvenience that once a Version is created, although it can be stopped and the name can be changed, it cannot be deleted.
 
 ## Training Output Files and Re-training

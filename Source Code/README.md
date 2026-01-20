@@ -3,6 +3,7 @@ This directory contains the source code for all architectures explored in this w
 
 Training (including validation) is performed using the Kaggle platform ([kaggle.com](https://www.kaggle.com/)), while testing is done locally. 
 A Kaggle account is required.
+![image alt](https://github.com/GoncaloABdaSilva/MastersThesis/blob/e3545e2bc7e326d723fe61819225da227bd1cd6e/readmeImages/kaggle_welcome.png)
 
 ## Dataset Preparation and Upload
 The training and validation datasets must first be uploaded to Kaggle. 
@@ -33,9 +34,9 @@ To use the uploaded files, click "+ Add input", filter by "Your Work" and "Datas
 For dual-GPU training (16GB x2), under the notebook's name go to "Settings", "Accelerator", "GPU T4 x2".
 The file [notebook_example.ipynb](https://github.com/GoncaloABdaSilva/MastersThesis/blob/3d9007e7450842499506f1f5639a5c61f46a4643/Source%20Code/notebook_example.ipynb) contains the code used to start training , as well as an example of what it prints while running. Copy the code cells to your notebook.
 The following image is an example of how it should look.
-![image alt](https://github.com/GoncaloABdaSilva/MastersThesis/blob/315dbc4cfe909fd4bcd5d99da06ca736f51318e7/readmeImages/kaggle_welcome.png)
+![image alt](https://github.com/GoncaloABdaSilva/MastersThesis/blob/e3545e2bc7e326d723fe61819225da227bd1cd6e/readmeImages/kaggle_notebook.png)
 
-##Dataset Path Configuration
+## Dataset Path Configuration
 Your dataset names might have different names from mine, making their paths in kaggle different. You can look up for them by hovering their name and pressing "Copy file path". 
 If image dataset paths are different, then data directories must be updated in train.py by copying the new file path into a variable such as "CRACKTREE260_DS_KAGGLE", for example. Update path at notebook's first cell.
 If code dataset paths are different, update path at notebook's third cell, both in second and last line.

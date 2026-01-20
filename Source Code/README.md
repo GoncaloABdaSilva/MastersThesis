@@ -1,13 +1,13 @@
-#User Guide
+# User Guide
 This directory contains the source code for all architectures explored in this work.
 
 Training (including validation) is performed using the Kaggle platform ([kaggle.com](https://www.kaggle.com/)), while testing is done locally. A Kaggle account is required.
 
-##Dataset Preparation and Upload
+## Dataset Preparation and Upload
 The training and validation datasets must first be uploaded to Kaggle. A folder should be created with the name of the dataset, having two inside folders: "train" and "val". Each of them should have two inside folders: "img" and "gt", where images and ground truth images, respectively, should be. 
 Once the entire folder structure is set, it must be compressed into a ZIP file. On Kaggle, go to "Datasets", click "+ New Dataset", drag and drop the ZIP file and assign it a name.
 
-##Model Code Upload
+## Model Code Upload
 For the actual model, four python files and one json file are needed: 
 - main.py;
 - dataset.py;
@@ -22,7 +22,7 @@ In SAM2, instead of model.py, it is sam2_seg_wrapper.py, and the notebook code i
 
 In YOLO, there is only one file, [yolo12-seg-fine-tune.ipynb](https://github.com/GoncaloABdaSilva/MastersThesis/blob/463055eee4503034dbc181c05a1622ea4adae3c1/Source%20Code/YOLOv11-seg/yolo12-seg-fine-tune.ipynb), that should be copied instead. 
 
-##Notebook Creation and Configuration
+## Notebook Creation and Configuration
 After uploading both the code and datasets, go to Kaggle's homepage, select "Code", and click "+ New Notebook" to create a notebook. All training is executed within this notebook, while using Kaggle's free computational resources. 
 To use the uploaded files, click "+ Add input", filter by "Your Work" and "Datasets" to reveal all your datasets, and press the "+" button on those to be used.
 
@@ -38,7 +38,7 @@ If code dataset paths are different, update path at notebook's third cell, both 
 
 On the third cell you must state for how many epochs you would like to train the model by changing the number after "--epochs".
 
-##Training Execution Options
+## Training Execution Options
 To train the model there are two options:
 - The first one is by pressing the button "Run all", which will automatically start a session and execute all cells in order. Each cell's prints will appear between that cell and the next one, and output files will appear on the Output section. 
 - The second option is by pressing the "Save Version" button on the top right corner. After giving a name (e.g. "Attempt 1), select "Save & Run All" and on advanced settings select "Run with GPU for all sessions".
@@ -48,7 +48,7 @@ The main disadvantages from the first option to the second are:
 - if code is updated, it requires to manually scan for updates by hovering the dataset name, "More Options", "Check for updates".
 The second option has the inconvenience that once a Version is created, although it can be stopped and the name can be changed, it cannot be deleted.
 
-##Training Output Files and Re-training
+## Training Output Files and Re-training
 During training, we validate learning using metrics like F1-score and mIoU. In epochs where we get the best metric score, we save a copy of the model at that epoch. In the end we end up with four model files, with the extension ".pth.tar". A JSON file is also created (scores.json), containing metric values for every epoch as well as top metric scores.
 Once training is over, files can be downloaded. 
 - In the "Run All" option, they are available in Output, on the right side of the screen.
@@ -56,12 +56,12 @@ Once training is over, files can be downloaded.
 
 If you want to continue with training one of the models, you must upload the desired .pth.tar and updated scores.json files to the dataset with the model's code. Then, on the last line of the notebook, replace "--no-load_model" with "--load-model". The number of epochs must be updated to reflect the total desired number of epochs (e.g. after training for 10 epochs, and training an aditional 20, epochs should be set to 30).
 
-##Testing
+## Testing
 For testing, in the same local directory as your code:
 - Create a folder named "result" and store the .pth.tar files. You may also store the scores.json file and use it to plot metric scores progression.
 - Create a folder (or copy) named "test" with your testing images and respective ground truths, following the same "img" and "gt" structure used previously.
 - Create a folder named "test_saved_images". Images produced during validation will be stored here, with one subfolder per model.
 - Run "test_models.py" on your prefered IDE, results will be printed.
 
-##Fine-tuning YOLO
+## Fine-tuning YOLO
 For fine-tuning YOLOv11-seg, the user needs to upload the desired image dataset the same way as before, changing its name on the last code cell, to enable the "GPU T4 x2" accelerator, and start training with one of the presented options. It is also possible to change the number of epochs or YOLO model used by changing the variables in code cells.

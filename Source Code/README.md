@@ -1,11 +1,15 @@
 # User Guide
 This directory contains the source code for all architectures explored in this work.
 
-Training (including validation) is performed using the Kaggle platform ([kaggle.com](https://www.kaggle.com/)), while testing is done locally. A Kaggle account is required.
+Training (including validation) is performed using the Kaggle platform ([kaggle.com](https://www.kaggle.com/)), while testing is done locally. 
+A Kaggle account is required.
 
 ## Dataset Preparation and Upload
-The training and validation datasets must first be uploaded to Kaggle. A folder should be created with the name of the dataset, having two inside folders: "train" and "val". Each of them should have two inside folders: "img" and "gt", where images and ground truth images, respectively, should be. 
-Once the entire folder structure is set, it must be compressed into a ZIP file. On Kaggle, go to "Datasets", click "+ New Dataset", drag and drop the ZIP file and assign it a name.
+The training and validation datasets must first be uploaded to Kaggle. 
+A folder should be created with the name of the dataset, having two inside folders: "train" and "val". 
+Each of them should have two inside folders: "img" and "gt", where images and ground truth images, respectively, should be. 
+Once the entire folder structure is set, it must be compressed into a ZIP file. 
+On Kaggle, go to "Datasets", click "+ New Dataset", drag and drop the ZIP file and assign it a name.
 
 ## Model Code Upload
 For the actual model, four python files and one json file are needed: 

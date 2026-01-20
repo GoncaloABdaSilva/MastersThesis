@@ -1,0 +1,6 @@
+{
+    "best_f1_scor" : 0.0,
+    "best_miou" : 0.0,
+    "best_loss" : 4.0,
+    "avg_loss_list" : [],
+}

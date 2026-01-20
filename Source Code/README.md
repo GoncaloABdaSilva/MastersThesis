@@ -41,7 +41,7 @@ The following image is an example of how it should look.
 
 ## Dataset Path Configuration
 Your dataset names might have different names from mine, making their paths in kaggle different. You can look up for them by hovering their name and pressing "Copy file path". 
-If image dataset paths are different, then data directories must be updated in train.py by copying the new file path into a variable such as "CRACKTREE260_DS_KAGGLE", for example. Update path at notebook's first cell.
+If image dataset paths are different, then data directories must be updated in train.py by copying the new file path into a variable such as "CRACKTREE260_DS_KAGGLE", for example. Update the dataset path at the first cell (you may also delete it, as it is not needed).
 If code dataset paths are different, update path at notebook's third cell, both in second and last line.
 
 On the third cell you must state for how many epochs you would like to train the model by changing the number after "--epochs".

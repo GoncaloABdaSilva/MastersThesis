@@ -27,7 +27,7 @@ After uploading both the code and datasets, go to Kaggle's homepage, select "Cod
 To use the uploaded files, click "+ Add input", filter by "Your Work" and "Datasets" to reveal all your datasets, and press the "+" button on those to be used.
 
 For dual-GPU training (16GB x2), under the notebook's name go to "Settings", "Accelerator", "GPU T4 x2".
-The file [Source Code/notebook_example.ipynb](https://github.com/GoncaloABdaSilva/MastersThesis/blob/3d9007e7450842499506f1f5639a5c61f46a4643/Source%20Code/notebook_example.ipynb) contains the code used to start training , as well as an example of what it prints while running. Copy the code cells to your notebook.
+The file [notebook_example.ipynb](https://github.com/GoncaloABdaSilva/MastersThesis/blob/3d9007e7450842499506f1f5639a5c61f46a4643/Source%20Code/notebook_example.ipynb) contains the code used to start training , as well as an example of what it prints while running. Copy the code cells to your notebook.
 The following image is an example of how it should look.
 ![image alt](https://github.com/GoncaloABdaSilva/MastersThesis/blob/315dbc4cfe909fd4bcd5d99da06ca736f51318e7/readmeImages/kaggle_welcome.png)
 

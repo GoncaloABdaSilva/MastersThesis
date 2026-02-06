@@ -6,7 +6,14 @@ A Kaggle account is required.
 ![image alt](https://github.com/GoncaloABdaSilva/MastersThesis/blob/e3545e2bc7e326d723fe61819225da227bd1cd6e/readmeImages/kaggle_welcome.png)
 
 ## Dataset Preparation and Upload
-The training and validation datasets must first be uploaded to Kaggle. 
+The training and validation datasets must first be uploaded to Kaggle.
+Here are the links where some of the used pavement crack datasets in my thesis can be downloaded from:
+- Liu et al. DeepCrack: [GitHub](https://github.com/yhlleo/DeepCrack);
+- Zou et al. DeepCrack (includes CrackTree260, CRKWH100, CrackLS315,  Stone331): [GitHub](https://github.com/qinnzou/DeepCrack);
+- CrackForest (CFD): [Dataset](https://github.com/cuilimeng/CrackForest-dataset);
+- CrackSC: [GitHub](https://github.com/jonguo111/Transformer-Crack);
+- Crack500, GAPs384 and several others: [GitHub](https://github.com/fyangneil/pavement-crack-detection).
+
 A folder should be created with the name of the dataset, having two inside folders: "train" and "val". 
 Each of them should have two inside folders: "img" and "gt", where images and ground truth images, respectively, should be. 
 Once the entire folder structure is set, it must be compressed into a ZIP file. 

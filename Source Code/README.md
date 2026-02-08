@@ -7,15 +7,41 @@ A Kaggle account is required.
 
 ## Dataset Preparation and Upload
 The training and validation datasets must first be uploaded to Kaggle.
-Here are the links where some of the used pavement crack datasets in my thesis can be downloaded from:
+Here are the links from which some of the pavement crack datasets used in my thesis can be downloaded:
 - Liu et al. DeepCrack: [GitHub](https://github.com/yhlleo/DeepCrack);
 - Zou et al. DeepCrack (includes CrackTree260, CRKWH100, CrackLS315,  Stone331): [GitHub](https://github.com/qinnzou/DeepCrack);
 - CrackForest (CFD): [Dataset](https://github.com/cuilimeng/CrackForest-dataset);
 - CrackSC: [GitHub](https://github.com/jonguo111/Transformer-Crack);
 - Crack500, GAPs384 and several others: [GitHub](https://github.com/fyangneil/pavement-crack-detection).
 
-A folder should be created with the name of the dataset, having two inside folders: "train" and "val". 
-Each of them should have two inside folders: "img" and "gt", where images and ground truth images, respectively, should be. 
+### CrackTree260 Preparation
+After downloading and unzipping both "image" and "ground truth" folders (from link above), go to "image" and delete the "image.rar" folder.
+Because some image files have the extension ".JPG", we convert them to ".jpg". Download this file ([convert_JPG_to_jpg.py](https://github.com/GoncaloABdaSilva/MastersThesis/blob/8eeef90637db71ddbf02162d4c8cfeb46a9c4074/Dataset%20Preparation/CrackTree260/convert_JPG_to_jpg.py)) and insert it into the "image" folder. Open the file in your prefered IDE (VSCode, for example) and run it.
+
+Ground truth images come in ".bmp" format. We convert them into ".png" in order to reduce its memory size, from 130MB into 903KB. In the same directory as "gt", create a new folder named "new_gt". Then, download this file ([convert_bmp_to_png](https://github.com/GoncaloABdaSilva/MastersThesis/blob/8eeef90637db71ddbf02162d4c8cfeb46a9c4074/Dataset%20Preparation/CrackTree260/convert_bmp_to_png.py)) and insert it into the same directory "gt" and "new_gt". Open the file in your prefered IDE (VSCode, for example) and run it. After it's done, delete the "gt" folder and rename the folder "new_gt" to "gt".
+
+From the 260 images (and respective ground truths), we have divided them into three folders: 200 images for the "train" folder, 20 images for the "val" folder and 40 images for the "test" folder.
+Each of them should have two inside folders: "img" and "gt", where images and ground truth images, respectively, should be. Corresponding image and ground truths will have the same name with a different extension (".jpg" and ".png"). 
+
+#### CrackTree260 with multi-class Preparation
+Create a new folder and copy (don't delete) all three previously created folders ("train", "val", "test"). 
+Then, download the provided python file ([add_boundary_class.py](https://github.com/GoncaloABdaSilva/MastersThesis/blob/8d6dd7623d2628ff13ca9a001e1d02a4af5c6e0b/Source%20Code/U-Net/Multi-Class%20U-Net/add_boundary_class.py)) and insert it in the same directory as the three folders.
+Also in that directory, create three new folders named "new_train", "new_test" and "new_val". 
+From the "train" folder, copy its "img" folder into the "new_train" folder. Then create an empty "gt" folder next to it. Do the same for the remaining two folders.
+Open the python file in your prefered IDE (VSCode, for example) and run the code, which will add a neighbourhood class (in red) to the ground truth and insert it into the corresponding "gt" folder.
+Delete "train", "val" and "test" folders. Rename the "new_X" folders by removing the "new_" from their name. 
+You should end up with three folders ("train", "val", "test"), each with an "img" and "gt" folder, and inside the "gt" ones, ground truth images in black, white and red.
+
+### Crack500 Preparation
+
+
+### GAPs384 Preparation
+
+
+### Dataset of images with shadows and CLAHE Preparation
+
+
+A folder should be created with the name of the dataset, having two inside folders: "train" and "val" (previously explained how to be created). 
 Once the entire folder structure is set, it must be compressed into a ZIP file. 
 On Kaggle, go to "Datasets", click "+ New Dataset", drag and drop the ZIP file and assign it a name.
 

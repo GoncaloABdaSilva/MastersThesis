@@ -6,7 +6,7 @@ A Kaggle account is required.
 ![image alt](https://github.com/GoncaloABdaSilva/MastersThesis/blob/e3545e2bc7e326d723fe61819225da227bd1cd6e/readmeImages/kaggle_welcome.png)
 
 ## Dataset Preparation and Upload
-The training and validation datasets must first be uploaded to Kaggle.
+The training and validation datasets must be prepared before uploading them to Kaggle.
 Here are the links from which some of the pavement crack datasets used in my thesis can be downloaded:
 - Liu et al. DeepCrack: [GitHub](https://github.com/yhlleo/DeepCrack);
 - Zou et al. DeepCrack (includes CrackTree260, CRKWH100, CrackLS315,  Stone331): [GitHub](https://github.com/qinnzou/DeepCrack);
@@ -28,19 +28,21 @@ Create a new folder and copy (don't delete) all three previously created folders
 Then, download the provided python file ([add_boundary_class.py](https://github.com/GoncaloABdaSilva/MastersThesis/blob/8d6dd7623d2628ff13ca9a001e1d02a4af5c6e0b/Source%20Code/U-Net/Multi-Class%20U-Net/add_boundary_class.py)) and insert it in the same directory as the three folders.
 Also in that directory, create three new folders named "new_train", "new_test" and "new_val". 
 From the "train" folder, copy its "img" folder into the "new_train" folder. Then create an empty "gt" folder next to it. Do the same for the remaining two folders.
-Open the python file in your prefered IDE (VSCode, for example) and run the code, which will add a neighbourhood class (in red) to the ground truth and insert it into the corresponding "gt" folder.
-Delete "train", "val" and "test" folders. Rename the "new_X" folders by removing the "new_" from their name. 
+Open the file in your prefered IDE (VSCode, for example) and run it, which will add a neighbourhood class (in red) to the ground truth and insert it into the corresponding "new_gt" folder.
+Delete "train", "val" and "test" folders. Rename the "new_X" folders by removing the "new_" from their name.
 You should end up with three folders ("train", "val", "test"), each with an "img" and "gt" folder, and inside the "gt" ones, ground truth images in black, white and red.
 
 ### Crack500 Preparation
-
+After downloading (from link above), unzipping, and moving the CRACK500 folder to a different directory, delete all three ".txt" files as well as ZIP folders "testdata", "valdata" and "fphb_testresult". Unzip the remaining three folders and delete the ZIP files.
+Then inside each of the three folders, create two empty folders named "img" and "gt". Move all images (should be ".jpg" files) into "img" and all ground truths (should be ".png" files) into "gt".
+Rename the folders from "testcrop", "traincrop" and "valcrop" by removing "crop" from their name.
 
 ### GAPs384 Preparation
 
 
 ### Dataset of images with shadows and CLAHE Preparation
 
-
+### Upload dataset to Kaggle
 A folder should be created with the name of the dataset, having two inside folders: "train" and "val" (previously explained how to be created). 
 Once the entire folder structure is set, it must be compressed into a ZIP file. 
 On Kaggle, go to "Datasets", click "+ New Dataset", drag and drop the ZIP file and assign it a name.

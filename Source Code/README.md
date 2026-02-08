@@ -40,9 +40,10 @@ Rename the folders from "testcrop", "traincrop" and "valcrop" by removing "crop"
 
 ### GAPs384 Preparation
 After downloading (from link above), unzipping, and moving the GAPS384 folder to a different directory, delete the .txt file as well as ZIP folders "GAPs384_raw_img_gt" and "fphb_testresult". Unzip the remaining two folders and delete the ZIP files.
-Rename the folders from "croppedimg" and "croppedgt" to "img" and "gt", respectively.
-From the 509 images, we have divided them into three folders: 365 images for the "train" folder, 100 images for the "val" folder and 44 images for the "test" folder.
-Each of them should have two inside folders: "img" and "gt", where images and ground truth images, respectively, should be.
+Then, download the provided python file ([gaps384_preprocessing.py](https://github.com/GoncaloABdaSilva/MastersThesis/blob/36961998c0bf9ec0da6b76e4aa76cd35dc7d2bbf/Dataset%20Preparation/GAPs384/gaps384_preprocessing.py)) and insert it in the same directory as the new unzipped folders.
+In the same directory, create three folders named "train", "test", "val". Inside each of them, create two empty folders, "img" and "gt".
+Open the python file in your prefered IDE (VSCode, for example) and run it. This will apply changes to the images, so that all of them: are properly alligned; are using 8-bit pixels rather than 1; are cropped to 448x448 pixels. 
+It will also automatically shuffle the images and divide them into the folders, with 365 images for the "train" folder, 100 images for the "val" folder and 44 images for the "test" folder. Delete folders "croppedimg" and "croppedgt".
 
 ### Dataset of images with shadows and CLAHE Preparation
 

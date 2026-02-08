@@ -3,6 +3,7 @@ This directory contains the source code for all architectures explored in this w
 
 Training (including validation) is performed using the Kaggle platform ([kaggle.com](https://www.kaggle.com/)), while testing is done locally. 
 A Kaggle account is required.
+
 ![image alt](https://github.com/GoncaloABdaSilva/MastersThesis/blob/e3545e2bc7e326d723fe61819225da227bd1cd6e/readmeImages/kaggle_welcome.png)
 
 ## Dataset Preparation and Upload

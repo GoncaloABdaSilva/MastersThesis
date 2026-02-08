@@ -39,7 +39,10 @@ Then inside each of the three folders, create two empty folders named "img" and 
 Rename the folders from "testcrop", "traincrop" and "valcrop" by removing "crop" from their name.
 
 ### GAPs384 Preparation
-
+After downloading (from link above), unzipping, and moving the GAPS384 folder to a different directory, delete the .txt file as well as ZIP folders "GAPs384_raw_img_gt" and "fphb_testresult". Unzip the remaining two folders and delete the ZIP files.
+Rename the folders from "croppedimg" and "croppedgt" to "img" and "gt", respectively.
+From the 509 images, we have divided them into three folders: 365 images for the "train" folder, 100 images for the "val" folder and 44 images for the "test" folder.
+Each of them should have two inside folders: "img" and "gt", where images and ground truth images, respectively, should be.
 
 ### Dataset of images with shadows and CLAHE Preparation
 

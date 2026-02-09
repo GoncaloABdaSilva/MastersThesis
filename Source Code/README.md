@@ -113,9 +113,9 @@ If you want to continue with training one of the models, you must upload the des
 
 ## Testing
 For testing, in the same local directory as your code:
-- Create a folder named "result" and store the .pth.tar files. You may also store the scores.json file and use it to plot metric scores progression.
-- Create a folder (or copy) named "test" with your testing images and respective ground truths, following the same "img" and "gt" structure used previously.
-- Create a folder named "test_saved_images". Images produced during validation will be stored here, with one subfolder per model.
+- Create a folder named "result" and store the .pth.tar files. You may also store the scores.json file and use it to plot metric scores progression;
+- Create a folder (or copy) named "test" with your testing images and respective ground truths, following the same "img" and "gt" structure used previously;
+- Create a folder named "test_saved_images". Images produced during validation will be stored here, with one subfolder per model;
 - Run "test_models.py" on your prefered IDE, results will be printed.
 
 ## Multi-class U-Net

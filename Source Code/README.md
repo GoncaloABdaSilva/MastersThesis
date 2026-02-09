@@ -46,7 +46,7 @@ Open the python file in your prefered IDE (VSCode, for example) and run it. This
 It will also automatically shuffle the images and divide them into the folders, with 365 images for the "train" folder, 100 images for the "val" folder and 44 images for the "test" folder. Delete folders "croppedimg" and "croppedgt".
 
 ### Dataset of images with shadows and CLAHE Preparation
-We have selected 92 images from 5 different datasets in order to create a "Shadows Dataset". The selected files are listed by Dataset on the text file [shadows_dataset.txt](https://github.com/GoncaloABdaSilva/MastersThesis/blob/64c5fa253586a97d1634651fc978e4a4b5f82a1d/Dataset%20Preparation/Shadows%20Dataset/shadows_dataset.txt).
+We have selected 92 images from 5 different datasets in order to create a "Shadows Dataset". The selected files are listed by Dataset on the text file ([shadows_dataset.txt](https://github.com/GoncaloABdaSilva/MastersThesis/blob/64c5fa253586a97d1634651fc978e4a4b5f82a1d/Dataset%20Preparation/Shadows%20Dataset/shadows_dataset.txt)).
 To use CLAHE augmentation, create a folder named "images_with_shadows_clahe" (feel free to change the name in the code). From whichever dataset you want to apply CLAHE augmentation, copy its "img" and "gt" folders into the folder "images_with_shadows_clahe".
 Then, download the provided python file ([clahe_to_images.py](https://github.com/GoncaloABdaSilva/MastersThesis/blob/74fe8ed410d0fc8861efa93bc5ead2455be66fc9/Dataset%20Preparation/CLAHE%20Augmentation/clahe_to_images.py)) and insert it in the same directory as "images_with_shadows_clahe". 
 Open the python file in your prefered IDE (VSCode, for example) and run it. This will apply the augmentation to all images.

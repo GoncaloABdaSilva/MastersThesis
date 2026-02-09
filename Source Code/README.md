@@ -123,7 +123,7 @@ For the multi-class implementation, we already covered how to create the new dat
 The previous instructions are valid to train and test this implementation.
 Some diferences between this multi-class and the binary U-Net implementations are:
 - As we are predicting three classes, the model outputs three channels instead of one, each predicting separately that a pixel belongs to a specific class;
-- We use *torch.nn.CrossEntropyLoss"* as a loss function;
+- We use *torch.nn.CrossEntropyLoss* as a loss function;
 - In the validation step, we apply *torch.argmax* to the model's predicted probabilities. For each pixel, it determines the class with the highest probability and selects it;
 - In the printed text after each epoch, instead of only having information about crack predictions, there is information about all three classes' predictions.
 

@@ -36,7 +36,7 @@ You should end up with three folders ("train", "val", "test"), each with an "img
 ### Crack500 Preparation
 After downloading (from link above), unzipping, and moving the CRACK500 folder to a different directory, delete all three ".txt" files as well as ZIP folders "testdata", "valdata" and "fphb_testresult". Unzip the remaining three folders and delete the ZIP files.
 Then inside each of the three folders, create two empty folders named "img" and "gt". Move all images (should be ".jpg" files) into "img" and all ground truths (should be ".png" files) into "gt".
-Rename the folders from "testcrop", "traincrop" and "valcrop" by removing "crop" from their name.
+Rename the folders "testcrop", "traincrop" and "valcrop" by removing "crop" from their name.
 
 ### GAPs384 Preparation
 After downloading (from link above), unzipping, and moving the GAPS384 folder to a different directory, delete the .txt file as well as ZIP folders "GAPs384_raw_img_gt" and "fphb_testresult". Unzip the remaining two folders and delete the ZIP files.
@@ -47,6 +47,7 @@ It will also automatically shuffle the images and divide them into the folders, 
 
 ### Dataset of images with shadows and CLAHE Preparation
 We have selected 92 images from 5 different datasets in order to create a "Shadows Dataset". The selected files are listed by Dataset on the text file ([shadows_dataset.txt](https://github.com/GoncaloABdaSilva/MastersThesis/blob/64c5fa253586a97d1634651fc978e4a4b5f82a1d/Dataset%20Preparation/Shadows%20Dataset/shadows_dataset.txt)).
+
 To use CLAHE augmentation, create a folder named "images_with_shadows_clahe" (feel free to change the name in the code). From whichever dataset you want to apply CLAHE augmentation, copy its "img" and "gt" folders into the folder "images_with_shadows_clahe".
 Then, download the provided python file ([clahe_to_images.py](https://github.com/GoncaloABdaSilva/MastersThesis/blob/74fe8ed410d0fc8861efa93bc5ead2455be66fc9/Dataset%20Preparation/CLAHE%20Augmentation/clahe_to_images.py)) and insert it in the same directory as "images_with_shadows_clahe". 
 Open the python file in your prefered IDE (VSCode, for example) and run it. This will apply the augmentation to all images.

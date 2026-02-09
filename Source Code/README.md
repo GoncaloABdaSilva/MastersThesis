@@ -27,7 +27,7 @@ Each of them should have two inside folders: "img" and "gt", where images and gr
 #### CrackTree260 with multi-class Preparation
 Create a new folder and copy (don't delete) all three previously created folders ("train", "val", "test"). 
 Then, download the provided python file ([add_boundary_class.py](https://github.com/GoncaloABdaSilva/MastersThesis/blob/8d6dd7623d2628ff13ca9a001e1d02a4af5c6e0b/Source%20Code/U-Net/Multi-Class%20U-Net/add_boundary_class.py)) and insert it in the same directory as the three folders.
-Also in that directory, create three new folders named "new_train", "new_test" and "new_val". 
+In the same directory, create three new folders named "new_train", "new_test" and "new_val". 
 From the "train" folder, copy its "img" folder into the "new_train" folder. Then create an empty "gt" folder next to it. Do the same for the remaining two folders.
 Open the file in your prefered IDE (VSCode, for example) and run it, which will add a neighbourhood class (in red) to the ground truth and insert it into the corresponding "new_gt" folder.
 Delete "train", "val" and "test" folders. Rename the "new_X" folders by removing the "new_" from their name.

@@ -117,5 +117,14 @@ For testing, in the same local directory as your code:
 - Create a folder named "test_saved_images". Images produced during validation will be stored here, with one subfolder per model.
 - Run "test_models.py" on your prefered IDE, results will be printed.
 
+## Multi-class U-Net
+For the multi-class implementation, we already covered how to create the new dataset. In the ground-truth images we have three classes of pixel-wise segmentation: background (black), crack (white), crack neighbourhodd (red).
+The previous instructions are valid to train and test this implementation.
+Some diferences between this multi-class and the binary U-Net implementations are:
+- As we are predicting three classes, the model outputs three channels instead of one, each predicting separately that a pixel belongs to a specific class;
+- We use *torch.nn.CrossEntropyLoss"* as a loss function;
+- In the validation step, we apply *torch.argmax* to the model's predicted probabilities. For each pixel, it determines the class with the highest probability and selects it;
+- In the printed text after each epoch, instead of only having information about crack predictions, there is information about all three classes' predictions.
+
 ## Fine-tuning YOLO
 For fine-tuning YOLOv11-seg, the user needs to upload the desired image dataset the same way as before, changing its name on the last code cell, to enable the "GPU T4 x2" accelerator, and start training with one of the presented options. It is also possible to change the number of epochs or YOLO model used by changing the variables in code cells.

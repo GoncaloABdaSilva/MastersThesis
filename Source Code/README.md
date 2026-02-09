@@ -67,7 +67,8 @@ For the actual model, four python files and one json file are needed:
 On Kaggle, go to "Datasets", press "+ New Dataset", drag and drop the files and name your dataset accordingly. 
 All python files are edited locally (not in Kaggle), so they should first be downloaded into a local directory (along with testing file "test_models"). In case of code modifications, updated files can be re-uploaded by using the "three dots button" on the top right corner, choosing "New Version", and drag and drop the updated files.
 
-In PoolingCrack, the backbone is pre-trained (check [here](https://github.com/GoncaloABdaSilva/MastersThesis/tree/b55c9d8893ec49e06c650133b4ad129bcb29fd27/Source%20Code/PoolingCrack/Pre-train%20Backbone)). A new notebook should be created, and the code from the provided notebook should be copied into it. A separate dataset containing the remaining Python files from the directory must also be created. After pre-training, download the resulting .pth.tar file and upload it to the PoolingCrack code dataset. Further details on how the download and upload procedure are provided later.
+In PoolingCrack, the backbone is pre-trained (check [here](https://github.com/GoncaloABdaSilva/MastersThesis/tree/b55c9d8893ec49e06c650133b4ad129bcb29fd27/Source%20Code/PoolingCrack/Pre-train%20Backbone)). A new notebook should be created, and the code from the provided notebook should be copied into it. A separate dataset containing the remaining Python files from the directory must also be created. You will need to import the public dataset "[ImageNet 1000 (mini)](http://kaggle.com/datasets/ifigotin/imagenetmini-1000)".
+After pre-training, download the resulting .pth.tar file and upload it to the PoolingCrack code dataset. Further details on how the download and upload procedure are provided later.
 
 In SAM2, instead of "model.py", it's "sam2_seg_wrapper.py", and the notebook code is different (check [sam2-fine-tuning.ipynb](https://github.com/GoncaloABdaSilva/MastersThesis/blob/463055eee4503034dbc181c05a1622ea4adae3c1/Source%20Code/SAM2/sam2-fine-tuning.ipynb)). 
 
@@ -76,6 +77,7 @@ In YOLO, there is only one file, [yolo12-seg-fine-tune.ipynb](https://github.com
 ## Notebook Creation and Configuration
 After uploading both the code and datasets, go to Kaggle's homepage, select "Code", and click "+ New Notebook" to create a notebook. All training is executed within this notebook, while using Kaggle's free computational resources. 
 To use the uploaded files, click "+ Add input", filter by "Your Work" and "Datasets" to reveal all your datasets, and press the "+" button on those to be used.
+TO use public datasets (such as "ImageNet 1000 (mini)"), do not select "Your Work".
 
 For dual-GPU training (16GB x2), under the notebook's name go to "Settings", "Accelerator", "GPU T4 x2". These resources are limited to 30 hours per week. You can check your weekly quota by going to Kaggle's homepage and clicking on the icon on the top right corner.
 The file [notebook_example.ipynb](https://github.com/GoncaloABdaSilva/MastersThesis/blob/3d9007e7450842499506f1f5639a5c61f46a4643/Source%20Code/notebook_example.ipynb) contains the code used to start training , as well as an example of what it prints while running. Copy the code cells to your notebook.

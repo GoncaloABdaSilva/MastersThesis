@@ -128,4 +128,4 @@ Some diferences between this multi-class and the binary U-Net implementations ar
 - In the printed text after each epoch, instead of only having information about crack predictions, there is information about all three classes' predictions.
 
 ## Fine-tuning YOLO
-For fine-tuning YOLOv11-seg, the user needs to upload the desired image dataset the same way as before, changing its name on the last code cell, to enable the "GPU T4 x2" accelerator, and start training with one of the presented options. It is also possible to change the number of epochs or YOLO model used by changing the variables in code cells.
+For fine-tuning YOLOv11-seg, upload the desired image dataset the same way as before, changing its name on the last code cell, enabling the "GPU T4 x2" accelerator, and start training with one of the presented options. It is also possible to change the number of epochs or YOLO model used by changing the variables in code cells. For more information, visit the [Ultralytics YOLO11](https://docs.ultralytics.com/pt/models/yolo11/) page.

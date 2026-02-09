@@ -17,9 +17,9 @@ Here are the links from which some of the pavement crack datasets used in my the
 
 ### CrackTree260 Preparation
 After downloading and unzipping both "image" and "ground truth" folders (from link above), go to "image" and delete the "image.rar" folder.
-Because some image files have the extension ".JPG", we convert them to ".jpg". Download this file ([convert_JPG_to_jpg.py](https://github.com/GoncaloABdaSilva/MastersThesis/blob/8eeef90637db71ddbf02162d4c8cfeb46a9c4074/Dataset%20Preparation/CrackTree260/convert_JPG_to_jpg.py)) and insert it into the "image" folder. Open the file in your prefered IDE (VSCode, for example) and run it.
+Because some image files have the extension ".JPG", we convert them to ".jpg". Download this file ([convert_JPG_to_jpg.py](https://github.com/GoncaloABdaSilva/MastersThesis/blob/8eeef90637db71ddbf02162d4c8cfeb46a9c4074/Dataset%20Preparation/CrackTree260/convert_JPG_to_jpg.py)) and insert it into the "image" folder. Open the python file in your prefered IDE (VSCode, for example) and run it.
 
-Ground truth images come in ".bmp" format. We convert them into ".png" in order to reduce its memory size, from 130MB into 903KB. In the same directory as "gt", create a new folder named "new_gt". Then, download this file ([convert_bmp_to_png.py](https://github.com/GoncaloABdaSilva/MastersThesis/blob/8eeef90637db71ddbf02162d4c8cfeb46a9c4074/Dataset%20Preparation/CrackTree260/convert_bmp_to_png.py)) and insert it into the same directory "gt" and "new_gt". Open the file in your prefered IDE (VSCode, for example) and run it. After it's done, delete the "gt" folder and rename the folder "new_gt" to "gt".
+Ground truth images come in ".bmp" format. We convert them into ".png" in order to reduce its memory size, from 130MB into 903KB. In the same directory as "gt", create a new folder named "new_gt". Then, download this file ([convert_bmp_to_png.py](https://github.com/GoncaloABdaSilva/MastersThesis/blob/8eeef90637db71ddbf02162d4c8cfeb46a9c4074/Dataset%20Preparation/CrackTree260/convert_bmp_to_png.py)) and insert it into the same directory "gt" and "new_gt". Open the python file in your prefered IDE (VSCode, for example) and run it. After it's done, delete the "gt" folder and rename the folder "new_gt" to "gt".
 
 From the 260 images (and respective ground truths), we have divided them into three folders: 200 images for the "train" folder, 20 images for the "val" folder and 40 images for the "test" folder.
 Each of them should have two inside folders: "img" and "gt", where images and ground truth images, respectively, should be. Corresponding image and ground truths will have the same name with a different extension (".jpg" and ".png"). 
@@ -29,7 +29,7 @@ Create a new folder and copy (don't delete) all three previously created folders
 Then, download the provided python file ([add_boundary_class.py](https://github.com/GoncaloABdaSilva/MastersThesis/blob/8d6dd7623d2628ff13ca9a001e1d02a4af5c6e0b/Source%20Code/U-Net/Multi-Class%20U-Net/add_boundary_class.py)) and insert it in the same directory as the three folders.
 In the same directory, create three new folders named "new_train", "new_test" and "new_val". 
 From the "train" folder, copy its "img" folder into the "new_train" folder. Then create an empty "gt" folder next to it. Do the same for the remaining two folders.
-Open the file in your prefered IDE (VSCode, for example) and run it, which will add a neighbourhood class (in red) to the ground truth and insert it into the corresponding "new_gt" folder.
+Open the python file in your prefered IDE (VSCode, for example) and run it, which will add a neighbourhood class (in red) to the ground truth and insert it into the corresponding "new_gt" folder.
 Delete "train", "val" and "test" folders. Rename the "new_X" folders by removing the "new_" from their name.
 You should end up with three folders ("train", "val", "test"), each with an "img" and "gt" folder, and inside the "gt" ones, ground truth images in black, white and red.
 
